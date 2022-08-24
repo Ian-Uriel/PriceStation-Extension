@@ -1,0 +1,22 @@
+
+.priceWithTaxes {
+  cursor: help !important;
+}
+
+/* PlayStation */
+.playstation--grid .priceWithTaxes {
+  font-size: 16px !important;
+}
+
+@media screen and (max-width: 1366px) {
+  .playstation--grid .priceWithTaxes {
+    font-size: 14px !important;
+  }
+
+}
+
+@media screen and (min-width: 1919px) {
+  .playstation--grid .priceWithTaxes {
+    font-size: 15px !important;
+  }
+}
