@@ -1,0 +1,30 @@
+{
+  "name": "PriceStation: Precio real de juegos en Argentina",
+  "description": "Conocé el precio real de los juegos de Playstation Store (Impuestos incluidos)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.playstation.com/es-ar/*",
+        "*://*.playstation.com/en-us/*"
+      ],
+      "css": [
+        "css/styles.css"
+      ],
+      "js": [
+        "js/index.js",
+        "js/helpers.js",
+        "js/playstation.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "256": "assets/256.png"
+  }
+}
