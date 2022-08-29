@@ -118,6 +118,9 @@ function scrapper({ priceElement, eventElement, currency, showEmoji }) {
   if (priceElement) {
     const originalPrice = priceElement.textContent;
     const newPrice = getNewPrice(originalPrice, tax, currency);
+    if (isNaN(newPrice)){
+      return originalPrice;
+    }
     newPrice && replacePrice(priceElement, eventElement, originalPrice, newPrice, showEmoji);
   }
 }
